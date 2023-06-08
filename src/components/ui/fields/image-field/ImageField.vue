@@ -1,7 +1,7 @@
 <template v-if="src">
   <UiFieldWrap v-if="showTitle" :title="title">
     <div class="image-field ses-content">
-      <img :src="src" :alt="alt" />
+      <img :src="src" :alt="alt" v-bind="$attrs" />
     </div>
   </UiFieldWrap>
 </template>

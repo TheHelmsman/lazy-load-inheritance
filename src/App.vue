@@ -4,7 +4,14 @@
     <hr />
     <ImageField
       title="Image component"
-      src="https://look.com.ua/pic/201412/1920x1080/look.com.ua-113489.jpg"
+      src="https://play-lh.googleusercontent.com/ePO8kmDI3mHQbCcMeSZyhQcXzononmORfsgdVxX-LeQ0GitA2Fa4Xuq-YXxoe029TSU"
+      alt="ImageAlt"
+      show-title
+    />
+    <hr />
+    <ImageLazyField
+      title="Image component"
+      src="https://play-lh.googleusercontent.com/ePO8kmDI3mHQbCcMeSZyhQcXzononmORfsgdVxX-LeQ0GitA2Fa4Xuq-YXxoe029TSU"
       alt="ImageAlt"
       show-title
     />
@@ -14,6 +21,7 @@
 
 <script setup lang="ts">
 import { ImageField } from '@/components/ui';
+import { ImageLazyField } from '@/components/ui';
 </script>
 
 <style>
