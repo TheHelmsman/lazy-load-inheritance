@@ -1,0 +1,67 @@
+$grid__bp-sm: 576;
+$grid__bp-md: 768;
+$grid__bp-lg: 992;
+$grid__bp-lga: 1024;
+$grid__bp-xl: 1280;
+$grid__bp-xla: 1366;
+$grid__cols: 12;
+
+$map-grid-props: (
+  '': 0,
+  '-sm': $grid__bp-sm,
+  '-md': $grid__bp-md,
+  '-lg': $grid__bp-lg,
+  '-xl': $grid__bp-xl,
+);
+
+$sides: ('-left', '-right');
+
+@mixin switching-background($sm-color, $default) {
+  background-color: $sm-color;
+
+  @media screen and (min-width: $grid__bp-md * 1px) {
+    background-color: $default;
+  }
+}
+
+@mixin field-margins {
+  margin-left: 0;
+
+  @media screen and (min-width: $grid__bp-md * 1px) {
+    margin-left: 125px;
+  }
+}
+
+@mixin create-mq($breakpoint, $min-or-max) {
+  @if ($breakpoint == 0) {
+    @content;
+  } @else {
+    @media screen and (#{$min-or-max}-width: $breakpoint * 1px) {
+      @content;
+    }
+  }
+}
+
+@mixin create-col-classes($modifier, $grid-cols, $breakpoint) {
+  @include create-mq($breakpoint, 'min') {
+    &__col#{$modifier}-offset-0 {
+      margin-left: 0;
+    }
+
+    @for $i from 1 through $grid-cols {
+      &__col#{$modifier}-#{$i} {
+        flex-basis: (100 / ($grid-cols / $i)) * 1%;
+      }
+
+      &__col#{$modifier}-offset-#{$i} {
+        margin-left: (100 / ($grid-cols / $i)) * 1%;
+      }
+    }
+  }
+}
+
+@mixin rtl-transform {
+  [dir='rtl'] & {
+    transform: rotateY(180deg);
+  }
+}

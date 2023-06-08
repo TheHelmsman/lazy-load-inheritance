@@ -1,0 +1,51 @@
+@import './grid';
+@import './colors';
+@import './mixins';
+
+* {
+  font-family: 'Open Sans', Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+[lazy='loading'] {
+  max-width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+iframe {
+  max-width: 100%;
+  display: block;
+}
+
+p {
+  word-break: break-word;
+  img {
+    height: auto !important;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.loader {
+  text-align: left;
+}
+
+ol {
+  display: block;
+  margin: 1em 0;
+  padding: 0 0 0 40px;
+}
+
+$font-size-small: 12px;

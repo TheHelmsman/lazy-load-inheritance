@@ -1,0 +1,7 @@
+*.txt eol=lf
+*.js eol=lf
+*.vue eol=lf
+*.ts eol=lf
+*.sh eol=lf
+.gitignore eol=lf
+.gitattributes eol=lf

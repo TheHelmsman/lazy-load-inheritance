@@ -1,0 +1,11 @@
+**/src/assets
+**/src/static
+**/node_modules
+**/.idea
+**/public
+**/*.json
+**/vitest.config.ts
+**/vite.config.ts
+.eslintrc.cjs
+index.html
+README.md
