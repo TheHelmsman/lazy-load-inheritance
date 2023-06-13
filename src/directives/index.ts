@@ -1,3 +1,4 @@
 import keydownIfFocused from './keydownIfFocused';
+import LazyLoadDirective from './lazyLoadDirective';
 
-export default [keydownIfFocused, 'anotherDirective'];
+export default [keydownIfFocused, LazyLoadDirective];

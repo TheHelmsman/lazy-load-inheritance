@@ -1,7 +1,7 @@
 <template v-if="src">
   <UiFieldWrap v-if="showTitle" :title="title">
-    <div class="image-field ses-content">
-      <img :src="src" :alt="alt" v-bind="$attrs" />
+    <div v-lazyload class="image-field ses-content">
+      <img :data-url="source" :alt="alt" />
     </div>
   </UiFieldWrap>
 </template>
@@ -11,7 +11,7 @@ import { UiFieldWrap } from '@/components/ui';
 
 type Props = {
   title: string;
-  src: string;
+  source: string;
   alt: string;
   showTitle?: boolean;
 };
