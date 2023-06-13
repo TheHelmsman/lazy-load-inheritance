@@ -49,3 +49,12 @@ ol {
 }
 
 $font-size-small: 12px;
+
+.image__with-preloader {
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif) no-repeat center;
+}

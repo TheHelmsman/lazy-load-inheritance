@@ -1,7 +1,7 @@
 <template v-if="src">
   <UiFieldWrap v-if="showTitle" :title="title">
     <div class="image-field ses-content">
-      <img :src="src" :alt="alt" v-bind="$attrs" />
+      <img :src="src" :alt="alt" loading="lazy" class="image__with-preloader" />
     </div>
   </UiFieldWrap>
 </template>
@@ -30,7 +30,7 @@ withDefaults(defineProps<Props>(), {
   width: 100%;
   color: $black;
   img {
-    max-width: 100%;
+    max-width: auto;
   }
 }
 </style>
